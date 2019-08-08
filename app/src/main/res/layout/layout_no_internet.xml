@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@mipmap/bg">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/logo_job" />
+
+        <com.decideme.client.attributes.CustomTextview
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="15sp"
+            android:textColor="@color/font_color"
+            android:text="Check your internet connection and\nTry Again"
+            android:gravity="center_horizontal"
+            app:fontName="@string/font_regular"/>
+
+        <com.decideme.client.attributes.CustomButton
+            android:id="@+id/btn_try_again"
+            android:layout_width="150dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@mipmap/btn_login"
+            android:text="Try Again"
+            android:textAllCaps="false"
+            android:textColor="@color/White"
+            android:textSize="16sp"
+            app:fontName="@string/font_bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>

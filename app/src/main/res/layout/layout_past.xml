@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <com.decideme.client.attributes.ExpandableHeightListView
+        android:id="@+id/list_service_history1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:visibility="gone"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="5dp" />
+
+    <com.decideme.client.attributes.CustomTextview
+        android:id="@+id/tv_past_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:text="No past job available"
+        android:textColor="@color/font_color2"
+        android:textSize="15sp"
+        android:visibility="gone"
+        app:fontName="@string/font_bold" />
+
+</LinearLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@mipmap/forgot_pass_base"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-3dp"
+            android:background="@mipmap/forgot_pass_header">
+
+            <com.decideme.client.attributes.CustomTextview
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Change Payment Method"
+                android:textColor="@color/White"
+                android:textSize="16sp"
+                app:fontName="@string/font_bold" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <com.decideme.client.attributes.CustomTextview
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select a new payment method for the following service"
+                android:textColor="@color/font_color"
+                android:textSize="13sp"
+                app:fontName="@string/font_light"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <RadioGroup
+                    android:id="@+id/rg_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/rb_cash"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/cash_icon"
+                        android:drawablePadding="8dp"
+                        android:drawableTint="#808080"
+                        android:text="Cash"
+                        android:checked="true"
+                        android:textColor="#808080"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/rb_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/payment"
+                        android:drawablePadding="8dp"
+                        android:layout_marginTop="8dp"
+                        android:drawableTint="#808080"
+                        android:text="Debit &amp; Credit Card"
+                        android:textColor="#808080"
+                        android:textSize="14sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_margin="15dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <com.decideme.client.attributes.CustomButton
+                android:id="@+id/btn_pay_method_save"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:background="@mipmap/request_btn"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textColor="@color/White"
+                android:textSize="15sp"
+                app:fontName="@string/font_bold"/>
+
+            <com.decideme.client.attributes.CustomButton
+                android:id="@+id/btn_pay_method_cancel"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1"
+                android:background="@mipmap/schedule_btn"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/White"
+                android:textSize="15sp"
+                app:fontName="@string/font_bold"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

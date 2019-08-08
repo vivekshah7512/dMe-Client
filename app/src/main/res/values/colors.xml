@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#004368</color>
+
+    <color name="Black1">#545454</color>
+    <color name="White">#FFFFFF</color>
+
+    <color name="font_color">#1D1918</color>
+    <color name="font_color1">#FA9C20</color>
+    <color name="font_color2">#AAAAAA</color>
+    <color name="actionbar_color">#1B191C</color>
+
+    <color name="sky_blue">#10B4F1</color>
+
+</resources>

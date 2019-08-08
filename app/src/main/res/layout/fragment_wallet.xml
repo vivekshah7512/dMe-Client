@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/rippelColor"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="35dp"
+                        android:src="@mipmap/wallate" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:orientation="vertical">
+
+                        <com.decideme.client.attributes.CustomTextview
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="Wallet Amount"
+                            android:textColor="@color/White"
+                            android:textSize="16sp"
+                            app:fontName="@string/font_regular" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.decideme.client.attributes.CustomTextview
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="P"
+                                android:textColor="@color/White"
+                                android:textSize="20sp"
+                                app:fontName="@string/font_regular" />
+
+                            <com.decideme.client.attributes.CustomTextview
+                                android:id="@+id/tv_wallet_amount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:singleLine="true"
+                                android:text="0.00"
+                                android:textColor="@color/White"
+                                android:textSize="25sp"
+                                app:fontName="@string/font_regular" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.decideme.client.attributes.CustomTextview
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp"
+                android:textSize="15sp"
+                android:textColor="@color/font_color"
+                android:text="Top Up"
+                app:fontName="@string/font_regular"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="8dp"
+                android:background="#808080"
+                android:alpha="0.5"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_top_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="12dp"
+                android:background="@mipmap/upload_pdf"
+                android:gravity="center_vertical|center_horizontal">
+
+                <com.decideme.client.attributes.CustomTextview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Input"
+                    android:textColor="@color/font_color"
+                    android:textSize="14sp"
+                    app:fontName="@string/font_bold" />
+
+                <com.decideme.client.attributes.CustomEditText
+                    android:id="@+id/et_money"
+                    android:layout_width="100dp"
+                    android:layout_height="32dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/rectangle1"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:singleLine="true"
+                    android:textColor="@color/font_color"
+                    android:textSize="15sp"
+                    app:fontName="@string/font_regular" />
+
+                <com.decideme.client.attributes.CustomButton
+                    android:id="@+id/btn_add_money"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@mipmap/btn_login"
+                    android:text="Add Money"
+                    android:textColor="@color/White"
+                    android:textSize="13sp"
+                    app:fontName="@string/font_bold" />
+
+            </LinearLayout>
+
+            <com.decideme.client.attributes.CustomTextview
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp"
+                android:text="Notes"
+                android:textColor="@color/font_color"
+                android:textSize="14sp"
+                app:fontName="@string/font_regular" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.4"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@mipmap/sap" />
+
+            <com.decideme.client.attributes.CustomTextview
+                android:id="@+id/tv_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="12dp"
+                android:textColor="#808080"
+                android:textSize="14sp"
+                app:fontName="@string/font_regular" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

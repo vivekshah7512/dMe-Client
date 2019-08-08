@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:padding="13dp"
+            android:src="@mipmap/back_icon"
+            android:tint="#FFF" />
+
+        <com.decideme.client.attributes.CustomTextview
+            android:id="@+id/tv_mobile_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/img_back"
+            android:text="Mobile Verification"
+            android:textColor="@color/White"
+            android:textSize="18sp"
+            app:fontName="@string/font_regular" />
+
+    </RelativeLayout>
+
+    <!-- Mobile/Email -->
+    <LinearLayout
+        android:id="@+id/ll_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_f_login"
+        android:layout_below="@+id/action_bar"
+        android:layout_margin="20dp"
+        android:background="@drawable/base_dialog"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.decideme.client.attributes.CustomTextview
+            android:id="@+id/tv_mobile_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            app:fontName="@string/font_bold" />
+
+        <com.decideme.client.attributes.CustomTextview
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal"
+            android:text="Enter your email id &amp; mobile number here, because we can't get your email id &amp; mobile number from your facebook/google account due to some privacy setting."
+            android:textColor="#808080"
+            android:textSize="14sp"
+            app:fontName="@string/font_regular" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="50dp"
+            android:background="@mipmap/forgot_pass_feild"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="0.1"
+                android:padding="5dp"
+                android:src="@mipmap/email" />
+
+            <com.decideme.client.attributes.CustomEditText
+                android:id="@+id/et_f_email"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.9"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="Email ID"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:singleLine="true"
+                android:textColor="@color/font_color"
+                android:textSize="14sp"
+                app:fontName="@string/font_regular" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@mipmap/forgot_pass_feild"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="0.1"
+                android:padding="5dp"
+                android:src="@mipmap/mobile" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:layout_weight="0.9">
+
+                <com.decideme.client.attributes.CustomTextview
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:background="@null"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/font_color"
+                    android:text="+63"
+                    android:textSize="14sp"
+                    app:fontName="@string/font_regular" />
+
+                <com.decideme.client.attributes.CustomEditText
+                    android:id="@+id/et_f_mobile"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="Mobile Number"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textColor="@color/font_color"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    app:fontName="@string/font_regular" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- OTP -->
+    <LinearLayout
+        android:id="@+id/ll_otp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_f_login"
+        android:layout_below="@+id/action_bar"
+        android:layout_margin="20dp"
+        android:background="@drawable/base_dialog"
+        android:orientation="vertical"
+        android:visibility="gone">
+        
+        <com.decideme.client.attributes.CustomTextview
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal"
+            android:text="Sit Back and Relax! We are verifying your Mobile No"
+            android:textColor="@color/font_color"
+            android:textSize="18sp"
+            app:fontName="@string/font_regular" />
+
+        <com.decideme.client.attributes.CustomTextview
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:text="(Enter 6-Digits One-Time-Password (OTP) below)"
+            android:textColor="#808080"
+            android:textSize="13sp"
+            app:fontName="@string/font_regular" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+
+            <com.decideme.client.attributes.CustomTextview
+                android:id="@+id/tv_mobile_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="#808080"
+                android:textSize="15sp"
+                app:fontName="@string/font_bold" />
+
+            <ImageView
+                android:id="@+id/img_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:src="@mipmap/edit_icon"
+                android:tint="#808080" />
+
+        </LinearLayout>
+
+        <com.alimuzaffar.lib.pin.PinEntryEditText
+            android:id="@+id/txt_pin_entry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="50dp"
+            android:cursorVisible="false"
+            android:inputType="number"
+            android:maxLength="6"
+            android:textSize="15sp"
+            android:imeOptions="actionDone"
+            app:pinAnimationType="popIn" />
+        <!--android:digits="1234567890"
+        android:inputType="number"
+        android:maxLength="4" //required
+        android:textIsSelectable="false" //recommended
+        android:textSize="20sp"
+        app:pinBackgroundDrawable="@drawable/bg_pin" //optional, use your own pin char background
+        app:pinAnimationType="popIn|fromBottom|none" //optional, default popIn
+        app:pinCharacterMask="*" //optional, default bullet
+        app:pinSingleCharHint="#" //optional, hint for each characters
+        app:pinTextBottomPadding="@dimen/space" //optional, space between character and bottom line.
+        app:pinLineStroke="2dp" //the stroke (height) of the bottom line by default.
+        app:pinLineStrokeSelected="4dp" //the stroke (height) of the bottom line when field is focused.
+        app:pinBackgroundIsSquare="true|false" //optional, if you want the background drawable to be a square or circle width of each digit will be set to match the height of the widget.
+        app:pinLineColors="@color/pin_line_colors" />-->
+
+        <com.decideme.client.attributes.CustomTextview
+            android:id="@+id/cm_otp_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/font_color"
+            android:textSize="14sp"
+            app:fontName="@string/font_regular" />
+
+        <LinearLayout
+            android:id="@+id/ll_resend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20sp"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <com.decideme.client.attributes.CustomTextview
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Did not receive the code?  "
+                android:textColor="#808080"
+                android:layout_gravity="bottom"
+                android:textSize="14sp"
+                app:fontName="@string/font_regular" />
+
+            <com.decideme.client.attributes.CustomTextview
+                android:id="@+id/tv_resend_otp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resend Code"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                app:fontName="@string/font_bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.decideme.client.attributes.CustomButton
+        android:id="@+id/btn_f_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@mipmap/btn_login"
+        android:text="SUBMIT"
+        android:textAllCaps="false"
+        android:textColor="@color/White"
+        android:textSize="15sp"
+        app:fontName="@string/font_bold" />
+
+</RelativeLayout>

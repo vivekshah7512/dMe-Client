@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@mipmap/map_dialog_bg"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_history_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:src="@mipmap/icon" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.decideme.client.attributes.CustomTextview
+                        android:id="@+id/tv_history_worker_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxWidth="170dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/font_color"
+                        android:textSize="14sp"
+                        app:fontName="@string/font_bold" />
+
+                    <View
+                        android:layout_width="1.5dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@color/font_color" />
+
+                    <com.decideme.client.attributes.CustomTextview
+                        android:id="@+id/tv_history_worker_cat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/Black1"
+                        android:textSize="12sp"
+                        app:fontName="@string/font_regular" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <RatingBar
+                        android:id="@+id/rating_history"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:isIndicator="true"
+                        android:numStars="5"/>
+
+                    <com.decideme.client.attributes.CustomTextview
+                        android:id="@+id/tv_history_rating_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="@color/Black1"
+                        android:textSize="11sp"
+                        app:fontName="@string/font_regular" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.decideme.client.attributes.CustomTextview
+                            android:id="@+id/tv_history_date_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/Black1"
+                            android:textSize="12sp"
+                            app:fontName="@string/font_regular" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_total_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.decideme.client.attributes.CustomTextview
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Total Time : "
+                                android:textColor="@color/font_color"
+                                android:textSize="12sp"
+                                app:fontName="@string/font_bold" />
+
+                            <com.decideme.client.attributes.CustomTextview
+                                android:id="@+id/tv_history_total_hours"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/Black1"
+                                android:textSize="12sp"
+                                app:fontName="@string/font_regular" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/img_history_profile"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@mipmap/user" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_toLeftOf="@+id/tv_history_total"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="5dp"
+                                android:layout_height="5dp"
+                                android:layout_gravity="center_vertical"
+                                android:src="@mipmap/greendot" />
+
+                            <com.decideme.client.attributes.CustomTextview
+                                android:id="@+id/tv_history_source"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:textColor="@color/Black1"
+                                android:textSize="10sp"
+                                app:fontName="@string/font_regular" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="-3dp"
+                            android:background="#d0d0d0" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-3dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="5dp"
+                                android:layout_height="5dp"
+                                android:layout_gravity="center_vertical"
+                                android:src="@mipmap/reddot" />
+
+                            <com.decideme.client.attributes.CustomTextview
+                                android:id="@+id/tv_history_destination"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:textColor="@color/Black1"
+                                android:textSize="10sp"
+                                app:fontName="@string/font_regular" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <com.decideme.client.attributes.CustomTextview
+                        android:id="@+id/tv_history_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/font_color1"
+                        android:textSize="14sp"
+                        app:fontName="@string/font_bold" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="com.decideme.client.activities.InvoiceActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/actionbar_color">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:padding="12dp"
+            android:src="@mipmap/back_icon" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/dme" />
+
+        <com.decideme.client.attributes.CustomTextview
+            android:id="@+id/tv_done"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="Done"
+            android:textColor="@color/White"
+            android:textSize="15sp"
+            android:visibility="gone"
+            app:fontName="@string/font_bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_actionbar"
+        android:background="#ecf0f1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_toLeftOf="@+id/btn_coupon"
+                android:background="@drawable/rectangle1">
+
+                <com.decideme.client.attributes.CustomEditText
+                    android:id="@+id/et_coupon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/img_clear"
+                    android:background="@null"
+                    android:gravity="left|center_vertical"
+                    android:hint="Have a coupon code? Enter here"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:singleLine="true"
+                    android:textColor="@color/font_color"
+                    android:textColorHint="#808080"
+                    android:textSize="15sp"
+                    app:fontName="@string/font_regular" />
+
+                <ImageView
+                    android:id="@+id/img_clear"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:padding="13dp"
+                    android:src="@mipmap/sc_cancle" />
+
+            </RelativeLayout>
+
+            <com.decideme.client.attributes.CustomButton
+                android:id="@+id/btn_coupon"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:background="@mipmap/btn_login"
+                android:text="Apply"
+                android:textColor="@color/White"
+                android:textSize="14sp"
+                android:visibility="gone"
+                app:fontName="@string/font_bold" />
+
+        </RelativeLayout>
+
+        <com.decideme.client.attributes.CustomTextview
+            android:id="@+id/tv_coupon_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/font_color1"
+            android:textSize="13sp"
+            android:visibility="gone"
+            app:fontName="@string/font_regular" />
+
+        <com.decideme.client.attributes.CustomTextview
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="12dp"
+            android:text="Choose from the offers below"
+            android:textColor="@color/font_color"
+            android:textSize="15sp"
+            app:fontName="@string/font_regular" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@mipmap/sap"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/White">
+
+            <com.decideme.client.attributes.ExpandableHeightListView
+                android:id="@+id/list_coupon"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="10dp"
+                android:divider="@mipmap/sap"
+                android:dividerHeight="1dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

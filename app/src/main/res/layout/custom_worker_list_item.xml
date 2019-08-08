@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/img_worker"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon" />
+
+        <com.decideme.client.attributes.CustomTextview
+            android:id="@+id/tv_worker_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toLeftOf="@+id/img_map_close"
+            android:layout_toRightOf="@+id/img_worker"
+            android:text="Alex Water"
+            android:textColor="@color/font_color"
+            android:textSize="13sp"
+            app:fontName="@string/font_regular" />
+
+        <ImageView
+            android:id="@+id/img_location"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:tint="#0D96C8"
+            android:layout_toLeftOf="@+id/cb_worker"
+            android:src="@mipmap/gps_my_location" />
+
+        <CheckBox
+            android:id="@+id/cb_worker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="10dp"
+            android:button="@drawable/checkbox_selector" />
+
+    </RelativeLayout>
+
+</LinearLayout>

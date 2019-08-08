@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fb="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg"
+    tools:context="com.decideme.client.activities.LoginActivity">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@mipmap/logo_job" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <com.decideme.client.attributes.CustomTextview
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Login"
+            android:textAllCaps="true"
+            android:textColor="@color/font_color"
+            android:textSize="20sp"
+            app:fontName="@string/font_bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@mipmap/feild_base"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <com.decideme.client.attributes.CustomEditText
+                    android:id="@+id/et_login_username"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.9"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="Email / 10-Digits Mobile"
+                    android:paddingLeft="20dp"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    app:fontName="@string/font_regular" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.1"
+                    android:padding="10dp"
+                    android:src="@mipmap/username" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@mipmap/sap" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <com.decideme.client.attributes.CustomEditText
+                    android:id="@+id/et_login_password"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.9"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:paddingLeft="20dp"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    app:fontName="@string/font_regular" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.1"
+                    android:padding="10dp"
+                    android:src="@mipmap/lock" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp">
+
+            <CheckBox
+                android:id="@+id/check_remember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/checkbox_selector_remember_me"
+                android:paddingLeft="8dp"
+                android:text="Remember me"
+                android:textColor="@color/font_color"
+                android:textSize="15sp" />
+
+            <com.decideme.client.attributes.CustomTextview
+                android:id="@+id/tv_forgot_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Forgot Password?"
+                android:textColor="@color/font_color"
+                android:textSize="15sp"
+                app:fontName="@string/font_regular" />
+
+        </RelativeLayout>
+
+        <com.decideme.client.attributes.CustomButton
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@mipmap/btn_login"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textColor="@color/White"
+            android:textSize="15sp"
+            app:fontName="@string/font_bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="80dp"
+                android:layout_height="1dp"
+                android:alpha="0.6"
+                android:background="@color/font_color" />
+
+            <com.decideme.client.attributes.CustomTextview
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="OR"
+                android:textColor="@color/font_color"
+                android:textSize="15sp"
+                app:fontName="@string/font_regular" />
+
+            <View
+                android:layout_width="80dp"
+                android:layout_height="1dp"
+                android:alpha="0.6"
+                android:background="@color/font_color" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/btn_login_facebook"
+                android:layout_width="290dp"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:background="#3b5998">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@mipmap/fb"
+                    android:padding="2dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"/>
+
+                <com.decideme.client.attributes.CustomTextview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Login with Facebook"
+                    android:textColor="@color/White"
+                    android:layout_centerInParent="true"
+                    android:textSize="15sp"
+                    app:fontName="@string/font_regular" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btn_login_google"
+                android:layout_width="290dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:background="#FFF">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:padding="2dp"
+                    android:src="@mipmap/go"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"/>
+
+                <com.decideme.client.attributes.CustomTextview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Login with Google"
+                    android:textColor="@color/font_color"
+                    android:layout_centerInParent="true"
+                    android:textSize="15sp"
+                    app:fontName="@string/font_regular" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/login_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_weight="1"/>
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/btn_sign_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.decideme.client.attributes.CustomButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@mipmap/facebook" />
+
+            <com.decideme.client.attributes.CustomButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="20dp"
+                android:background="@mipmap/google" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <com.decideme.client.attributes.CustomTextview
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:text="New Here ? "
+                android:textColor="@color/font_color"
+                android:textSize="15sp"
+                app:fontName="@string/font_regular" />
+
+            <com.decideme.client.attributes.CustomTextview
+                android:id="@+id/tv_login_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:text="Create Account"
+                android:textColor="@color/font_color"
+                android:textSize="15sp"
+                app:fontName="@string/font_regular" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

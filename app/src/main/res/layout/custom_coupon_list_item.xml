@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/White"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/btn_coupon_apply"
+                android:orientation="vertical">
+
+                <com.decideme.client.attributes.CustomTextview
+                    android:id="@+id/tv_coupon_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GET05"
+                    android:textColor="@color/font_color"
+                    android:textSize="14sp"
+                    app:fontName="@string/font_bold" />
+
+                <com.decideme.client.attributes.CustomTextview
+                    android:id="@+id/tv_coupon_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Flat P. 5 Cashback on payment of P. 100 or more. Code can be used till 31st Feb 2018."
+                    android:textColor="@color/Black1"
+                    android:textSize="12sp"
+                    app:fontName="@string/font_regular" />
+
+            </LinearLayout>
+
+            <com.decideme.client.attributes.CustomButton
+                android:id="@+id/btn_coupon_apply"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/btn_login"
+                android:text="Apply"
+                android:textColor="@color/White"
+                android:textSize="14sp"
+                app:fontName="@string/font_bold" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
