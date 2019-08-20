@@ -212,4 +212,9 @@ public final class PayMayaCheckoutActivity extends Activity {
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
     }
+
+    @Override
+    public void onBackPressed() {
+        finishFailure("Transaction Failed!");
+    }
 }

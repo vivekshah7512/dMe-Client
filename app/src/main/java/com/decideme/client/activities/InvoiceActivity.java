@@ -48,7 +48,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
-
 public class InvoiceActivity extends Activity implements View.OnClickListener,
         PayMayaCheckoutCallback {
 
@@ -215,7 +214,9 @@ public class InvoiceActivity extends Activity implements View.OnClickListener,
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         mPayMayaCheckout.onActivityResult(requestCode, resultCode, data);
-        order_id = data.getStringExtra("checkoutId");
+        if (data != null) {
+            order_id = data.getStringExtra("checkoutId");
+        }
     }
 
     // Invoice API

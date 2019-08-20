@@ -182,7 +182,9 @@ public class Fragment_Wallet extends Fragment implements View.OnClickListener,
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         mPayMayaCheckout.onActivityResult(requestCode, resultCode, data);
 //        Log.v("ID:", data.getStringExtra("checkoutId"));
-        requestReference = data.getStringExtra("checkoutId");
+        if (data != null) {
+            requestReference = data.getStringExtra("checkoutId");
+        }
     }
 
     @Override
