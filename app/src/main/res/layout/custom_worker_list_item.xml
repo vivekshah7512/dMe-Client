@@ -26,9 +26,8 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="8dp"
-            android:layout_toLeftOf="@+id/img_map_close"
+            android:layout_toLeftOf="@+id/img_location"
             android:layout_toRightOf="@+id/img_worker"
-            android:text="Alex Water"
             android:textColor="@color/font_color"
             android:textSize="13sp"
             app:fontName="@string/font_regular" />

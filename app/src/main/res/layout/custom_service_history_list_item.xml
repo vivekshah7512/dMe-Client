@@ -84,6 +84,7 @@
                         android:layout_marginLeft="8dp"
                         android:textColor="@color/Black1"
                         android:textSize="11sp"
+                        android:visibility="gone"
                         app:fontName="@string/font_regular" />
 
                 </LinearLayout>

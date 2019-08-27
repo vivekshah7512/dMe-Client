@@ -121,24 +121,6 @@
 
     </LinearLayout>
 
-    <!--<com.decideme.client.attributes.CustomEditText
-        android:id="@+id/et_search"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/rl_actionbar"
-        android:layout_margin="12dp"
-        android:background="@mipmap/search"
-        android:drawableLeft="@mipmap/search_icon"
-        android:drawablePadding="8dp"
-        android:gravity="center_vertical"
-        android:hint="Search Address"
-        android:paddingLeft="12dp"
-        android:paddingRight="12dp"
-        android:singleLine="true"
-        android:textColor="@color/font_color"
-        android:textSize="15sp"
-        app:fontName="@string/font_regular" />-->
-
     <RelativeLayout
         android:id="@+id/rl_animation"
         android:layout_width="wrap_content"
@@ -594,6 +576,7 @@
                         android:layout_marginLeft="5dp"
                         android:textColor="@color/Black1"
                         android:textSize="12sp"
+                        android:visibility="gone"
                         app:fontName="@string/font_regular" />
 
                 </LinearLayout>

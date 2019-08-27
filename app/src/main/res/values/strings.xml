@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">dMe Job</string>
+    <string name="app_name">dMe Client</string>
 
     <string name="font_bold">Roboto-Bold.ttf</string>
     <string name="font_light">Roboto-Light.ttf</string>

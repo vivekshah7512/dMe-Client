@@ -30,7 +30,6 @@
                     android:id="@+id/tv_coupon_code"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="GET05"
                     android:textColor="@color/font_color"
                     android:textSize="14sp"
                     app:fontName="@string/font_bold" />
@@ -40,7 +39,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="Flat P. 5 Cashback on payment of P. 100 or more. Code can be used till 31st Feb 2018."
                     android:textColor="@color/Black1"
                     android:textSize="12sp"
                     app:fontName="@string/font_regular" />

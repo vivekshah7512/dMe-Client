@@ -146,7 +146,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="5dp"
-                        android:text="4.5"
+                        android:visibility="gone"
                         android:textColor="@color/Black1"
                         android:textSize="12sp"
                         app:fontName="@string/font_regular" />
